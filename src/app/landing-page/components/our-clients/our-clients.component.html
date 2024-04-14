@@ -1,0 +1,16 @@
+<section class="container">
+  <div class="text-container">
+    <h2 class="text-headline-2">Our Clients</h2>
+    <p class="text-regular text-body-2">
+      We have been working with some Fortune 500+ clients
+    </p>
+  </div>
+
+  <div class="clients-images-container">
+    <div *ngFor="let client of clients">
+      <div class="image-container">
+        <img class="client-image" [src]="client.image" [alt]="client.name" />
+      </div>
+    </div>
+  </div>
+</section>
