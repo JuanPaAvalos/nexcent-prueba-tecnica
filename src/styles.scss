@@ -1,3 +1,6 @@
+
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 /* You can add global styles to this file, and also import other style files */
 @import url(./assets/presets/containers.css);
 @import url(./assets/presets/fonts.css);
@@ -232,5 +235,18 @@ button {
   }
 }
 
-// TODO: Verificar los eventos de los botones hover, focus, disabled, etc.S
 // TODO: Verificar Hacer CSS de los links
+
+
+
+//Custon libraries Elements
+.owl-theme .owl-dots .owl-dot span {
+  background: var(--color-tint-3) !important; /*active and on hover color*/
+
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--color-primary) !important; /* dots color*/
+
+}
