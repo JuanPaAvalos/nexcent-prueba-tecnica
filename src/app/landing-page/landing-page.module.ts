@@ -5,6 +5,7 @@ import { MainBannerComponent } from './components/main-banner/main-banner.compon
 import { LandingPageRoutingModule } from './landing-page-routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OurClientsComponent } from './components/our-clients/our-clients.component';
+import { SuitableClientsComponent } from './components/suitable-clients/suitable-clients.component';
 
 
 
@@ -12,7 +13,8 @@ import { OurClientsComponent } from './components/our-clients/our-clients.compon
   declarations: [
     HomeComponent,
     MainBannerComponent,
-    OurClientsComponent
+    OurClientsComponent,
+    SuitableClientsComponent
   ],
   imports: [
     CommonModule,

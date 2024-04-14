@@ -1,0 +1,17 @@
+
+<section class="container">
+  <div class="text-container">
+    <h3 class="text-headline-2">Manage your entire community in a single system</h3>
+    <p class="text-regular text-body-2">
+      Who is Nextcent suitable for?
+    </p>
+  </div>
+
+  <div class="suitable-clients-container">
+      <div class="suitable-client-card" *ngFor="let suitableClient of suitableClients">
+        <img class="suitable-client-image" [src]="suitableClient.image" [alt]="suitableClient.name" />
+        <p class="text-headline-3 suitable-client-name">{{suitableClient.name}}</p>
+        <p class="text-regular text-body-3 suitable-client-text">{{suitableClient.text}}</p>
+      </div>
+    </div>
+</section>
