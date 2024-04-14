@@ -76,6 +76,13 @@ button {
 button {
   border: none;
 }
+//colors
+.text-color-primary{color: var(--color-primary);}
+.text-color-dark-grey{color: var(--color-dark-grey);}
+.text-color-grey{color: var(--color-grey);}
+.text-color-white{color: var(--color-white);}
+.text-color-black{color: var(--color-black);}
+
 //Text
 @mixin text-headline-1 {
   font-weight: 600;
