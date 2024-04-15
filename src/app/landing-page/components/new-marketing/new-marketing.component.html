@@ -1,0 +1,31 @@
+<section class="container">
+  <div class="text-container">
+    <h3 class="text-headline-2">Caring is the new marketing</h3>
+    <p class="text-regular text-body-2 main-text">
+      The Nexcent blog is the best place to read about the latest membership
+      insights, trends and more. See who's joining the community, read about how
+      our community are increasing their membership income and lot's more.​
+    </p>
+  </div>
+
+  <div class="cards-container">
+    <div class="marketing-card" *ngFor="let suitableClient of suitableClients">
+      <div class="card-image">
+        <img [src]="suitableClient.image">
+      </div>
+      <div class="shadow-md card-text">
+        <p class="text-headline-4 text-color-grey card-body">
+          {{ suitableClient.text }}
+        </p>
+
+        <a class="meet-customers-link" href="">
+          <p class="text-headline-4 text-color-primary link-text">
+            Read More
+          </p>
+          <img class="link-image" src="assets/icons/arrows-directions/Right.webp" alt="">
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>

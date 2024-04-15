@@ -10,6 +10,7 @@ import { InformationBannerComponent } from './components/information-banner/info
 import { ReinventBusinessComponent } from './components/reinvent-business/reinvent-business.component';
 import { CountUpModule } from 'ngx-countup';
 import { CustomerTestimonialComponent } from './components/customer-testimonial/customer-testimonial.component';
+import { NewMarketingComponent } from './components/new-marketing/new-marketing.component';
 
 
 
@@ -21,7 +22,8 @@ import { CustomerTestimonialComponent } from './components/customer-testimonial/
     SuitableClientsComponent,
     InformationBannerComponent,
     ReinventBusinessComponent,
-    CustomerTestimonialComponent
+    CustomerTestimonialComponent,
+    NewMarketingComponent
   ],
   imports: [
     CommonModule,
