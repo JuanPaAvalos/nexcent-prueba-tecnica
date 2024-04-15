@@ -1,1 +1,78 @@
-<p>navbar works!</p>
+<div class="main-content">
+  <nav class="navbar-desktop">
+    <div class="container">
+      <a href="">
+        <img
+          class="navbar-img-large"
+          src="assets/images/Logo.webp"
+          alt="navbar logo"
+        />
+      </a>
+
+      <ul class="nav-links" [ngClass]="showMenu ? 'showMenu' : ''">
+        <li *ngFor="let link of siteLinks">
+          <a
+            class="text-body-2 text-color-black"
+            [routerLink]="link.route"
+            [routerLinkActive]="'router-link-active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ link.name }}
+          </a>
+        </li>
+      </ul>
+
+      <div class="session-buttons-container">
+        <a href="" class="session-buttons"
+          ><button class="button-standard navbar-button button-white">Login</button></a
+        >
+        <a href="" class="session-buttons"
+          ><button
+            class="button-standard button-standard-primary navbar-button"
+          >
+            Sign up
+          </button></a
+        >
+      </div>
+
+      <div class="hamburger" (click)="showMenu = !showMenu">
+        <img
+          class="close-btn"
+          src="assets/icons/interface/Burger.webp"
+          alt=""
+        />
+      </div>
+    </div>
+  </nav>
+
+  <nav class="movile-navbar" [ngClass]="showMenu ? 'showMenu' : ''">
+    <div class="close-menu-btn container">
+      <div class="close-btn" (click)="showMenu = !showMenu">
+        <img class="close-btn" src="assets/icons/interface/Close.webp" alt="" />
+      </div>
+    </div>
+
+    <ul>
+      <li *ngFor="let link of siteLinks">
+        <a [routerLink]="link.route" (click)="showMenu = !showMenu"
+          ><p class="text-color-black text-medium text-body-1">
+            {{ link.name }}
+          </p></a
+        >
+      </li>
+    </ul>
+
+    <div class="movile-session-buttons">
+      <a href="" class="session-buttons">
+        <button class="button-standard navbar-button text-medium button-white">Login</button>
+      </a>
+      <a href="" class="session-buttons">
+        <button
+          class="button-standard button-standard-primary navbar-button text-medium"
+        >
+          Sign up
+        </button>
+      </a>
+    </div>
+  </nav>
+</div>
