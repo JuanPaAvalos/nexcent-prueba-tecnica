@@ -1,0 +1,40 @@
+<section>
+    <div class="featured-testimonial container">
+      <div class="image-container">
+        <img class="testomonial-image" [src]="featuredTestimonial.image" [alt]="'testimonial ' + featuredTestimonial.author" />
+      </div>
+
+      <div class="info-container">
+        <div class="text-container">
+          <p class="text-medium text-body-2 text-color-grey testimonial-text">
+            {{featuredTestimonial.text}}
+          </p>
+          <p class="text-headline-4 text-color-primary testimonial-author">
+            {{featuredTestimonial.author}}
+          </p>
+          <p class="text-regular text-body-2 text-color-light-grey">
+            {{featuredTestimonial.company}}
+          </p>
+        </div>
+        <div class="customers-container">
+
+          <div class="clients-images-container">
+            <div *ngFor="let customer of ourCustomers">
+              <div class="image-container">
+                <img class="client-image" [src]="customer.image" [alt]="customer.name" />
+              </div>
+            </div>
+          </div>
+
+          <a class="meet-customers-link">
+            <p class="text-headline-4 text-color-primary link-text">
+              Meet all customers
+            </p>
+            <img class="link-image" src="assets/icons/arrows-directions/Right.webp" alt="">
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>

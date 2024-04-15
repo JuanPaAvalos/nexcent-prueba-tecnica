@@ -1,0 +1,135 @@
+section {
+  padding: 32px 0;
+  background-color: var(--color-silver);
+}
+
+.featured-testimonial {
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  column-gap: 32px;
+  row-gap: 16px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 32px 18px;
+  }
+}
+
+.info-container {
+  flex: 1 1 100%;
+  max-width: 750px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.client-image {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.testimonial-text {
+  padding-bottom: 16px;
+}
+
+.testimonial-author {
+  padding-bottom: 8px;
+}
+
+.testomonial-image {
+  max-width: 326px;
+  max-height: 326px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  width: 100%;
+}
+
+.customers-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  row-gap: 22px;
+  column-gap: 18px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.clients-images-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  // column-gap: 40px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  row-gap: 16px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    column-gap: 40px;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 640px) {
+    max-width: 380px;
+  }
+}
+
+.meet-customers-link {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  padding: 6px 12px;
+  align-items: center;
+  transition: all .2s;
+  border: 2px solid transparent;
+  border-radius: 4px;
+
+  &:hover {
+    color: var(--color-primary);
+    border: 2px solid var(--color-black);
+  }
+  &:focus {
+    border: 2px solid var(--color-black);
+  }
+  &:active {
+    color: var(--color-shade-2);
+    text-decoration: underline var(--color-color-shade-2);
+  }
+}
+
+.link-text{
+  transition: all .2s;
+
+  &:hover {
+    color: var(--color-shade-2);
+    text-decoration: underline var(--color-color-shade-2);
+  }
+
+  &:active {
+    color: var(--color-shade-2);
+    text-decoration: underline var(--color-color-shade-2);
+  }
+}
+
+.link-image {
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
