@@ -11,6 +11,7 @@ import { ReinventBusinessComponent } from './components/reinvent-business/reinve
 import { CountUpModule } from 'ngx-countup';
 import { CustomerTestimonialComponent } from './components/customer-testimonial/customer-testimonial.component';
 import { NewMarketingComponent } from './components/new-marketing/new-marketing.component';
+import { GetDemoBannerComponent } from './components/get-demo-banner/get-demo-banner.component';
 
 
 
@@ -23,7 +24,8 @@ import { NewMarketingComponent } from './components/new-marketing/new-marketing.
     InformationBannerComponent,
     ReinventBusinessComponent,
     CustomerTestimonialComponent,
-    NewMarketingComponent
+    NewMarketingComponent,
+    GetDemoBannerComponent
   ],
   imports: [
     CommonModule,
