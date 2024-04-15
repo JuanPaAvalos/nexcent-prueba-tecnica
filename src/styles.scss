@@ -73,6 +73,10 @@ button {
   cursor: pointer;
 }
 
+a{
+  text-decoration: none;
+}
+
 button {
   border: none;
 }
@@ -83,6 +87,17 @@ button {
 .text-color-grey{color: var(--color-grey);}
 .text-color-white{color: var(--color-white);}
 .text-color-black{color: var(--color-black);}
+
+//shadows
+@mixin box-shadow ($value) {
+  box-shadow:0 $value $value*2 0 var(--color-grey-blue);
+}
+
+.shadow-xs { @include box-shadow(2px) }
+.shadow-sm { @include box-shadow(4px) }
+.shadow-md { @include box-shadow(8px) }
+.shadow-lg { @include box-shadow(12px) }
+.shadow-xl { @include box-shadow(16px) }
 
 //Text
 @mixin text-headline-1 {
