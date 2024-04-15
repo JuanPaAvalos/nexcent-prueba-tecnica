@@ -16,24 +16,10 @@
           <img [src]="item.image" [alt]="item.name">
         </div>
         <div class="text-container">
-          <p  [countUp]="item.number" class="text-headline-3 text-color-dark-grey">0</p>
+          <p  [countUp]="item.number" [options]="{ enableScrollSpy: true }" class="text-headline-3 text-color-dark-grey">0</p>
           <p class="text-body-2 text-color-grey">{{item.name}}</p>
         </div>
       </div>
     </div>
-    <!-- <div class="left-container">
-      <h3 class="text-headline-2 banner-title">title</h3>
-      <p class="text-regular text-body-3 banner-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint hic
-        laboriosam, dolorem cum tempore asperiores .
-      </p>
-      <div class="button-container">
-        <button
-          class="button-standard button-standard-size-normal button-standard-primary"
-        >
-          Learn More
-        </button>
-      </div>
-    </div> -->
   </div>
 </section>
