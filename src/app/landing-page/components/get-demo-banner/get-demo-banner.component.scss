@@ -21,28 +21,14 @@ h3{
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 4px;
 
   &:focus {
-    border: 2px solid var(--color-black);
+    border: 1px solid var(--color-black);
   }
   &:active {
     // color: var(--color-shade-2);
-    text-decoration: underline var(--color-color-shade-2);
-  }
-}
-
-.link-text {
-  transition: all 0.2s;
-
-  &:hover {
-    color: var(--color-shade-2);
-    text-decoration: underline var(--color-color-shade-2);
-  }
-
-  &:active {
-    color: var(--color-shade-2);
     text-decoration: underline var(--color-color-shade-2);
   }
 }
