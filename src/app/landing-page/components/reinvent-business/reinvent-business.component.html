@@ -13,7 +13,7 @@
     <div class="left-container">
       <div class="item-card" *ngFor="let item of businessResults">
         <div class="card-image-container">
-          <img [src]="item.image" [alt]="item.name">
+          <img [src]="item.image" [alt]="item.name" width="48px" height="48px" loading="lazy">
         </div>
         <div class="text-container">
           <p  [countUp]="item.number" [options]="{ enableScrollSpy: true }" class="text-headline-3 text-color-dark-grey">0</p>

@@ -9,13 +9,13 @@
   </div>
 
   <div class="cards-container">
-    <div class="marketing-card" *ngFor="let suitableClient of suitableClients">
+    <div class="marketing-card" *ngFor="let blogEntry of blogEntries">
       <div class="card-image">
-        <img [src]="suitableClient.image">
+        <img [src]="blogEntry.image" [alt]="'Blog entry featured image ' + blogEntry.Title">
       </div>
       <div class="shadow-md card-text">
         <p class="text-headline-4 text-color-grey card-body">
-          {{ suitableClient.text }}
+          {{ blogEntry.text }}
         </p>
 
         <a class="meet-customers-link" href="">

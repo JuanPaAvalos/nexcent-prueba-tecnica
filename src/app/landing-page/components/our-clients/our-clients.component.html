@@ -9,7 +9,7 @@
   <div class="clients-images-container">
     <div *ngFor="let client of clients">
       <div class="image-container">
-        <img class="client-image" [src]="client.image" [alt]="client.name" />
+        <img class="client-image" [src]="client.image" [alt]="client.name" width="48px" height="48px" loading="lazy" />
       </div>
     </div>
   </div>

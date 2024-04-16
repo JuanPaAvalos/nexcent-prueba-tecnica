@@ -9,7 +9,7 @@
 
   <div class="suitable-clients-container">
       <div class="suitable-client-card" *ngFor="let suitableClient of suitableClients">
-        <img class="suitable-client-image" [src]="suitableClient.image" [alt]="suitableClient.name" />
+        <img class="suitable-client-image" [src]="suitableClient.image" [alt]="suitableClient.name" loading="lazy" width="65px" height="56px" />
         <p class="text-headline-3 suitable-client-name">{{suitableClient.name}}</p>
         <p class="text-regular text-body-3 suitable-client-text">{{suitableClient.text}}</p>
       </div>
