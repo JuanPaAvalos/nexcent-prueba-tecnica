@@ -13,7 +13,7 @@
         <li *ngFor="let link of siteLinks">
           <a
             class="text-body-2 text-color-black"
-            [routerLink]="link.route"
+            (click)="onClick(link.route)"
             [routerLinkActive]="'router-link-active'"
             [routerLinkActiveOptions]="{ exact: true }"
           >
