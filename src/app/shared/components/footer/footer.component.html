@@ -1,0 +1,68 @@
+<footer>
+  <div class="footer-container">
+    <div class="business-info-container">
+      <div class="logo-container">
+        <img src="assets/images/Logo-white.webp" alt="Nexcent Logo" />
+      </div>
+      <div class="legal-info-container">
+        <p class="text-color-silver text-regular text-body-3">
+          Copyright © 2020 Nexcent ltd.
+        </p>
+        <p class="text-color-silver text-regular text-body-3">
+          All rights reserved
+        </p>
+      </div>
+      <div class="social-media-links-container">
+        <div class="media-link-container" *ngFor="let item of socialMedia">
+          <a [href]="item.link">
+            <img [src]="item.image" [alt]="item.name" class="media-image" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="site-links-container">
+      <div class="links-column">
+        <p class="text-headline-4 text-color-white">Company</p>
+        <ul class="text-regular text-body-3">
+          <li><a class="text-color-silver" href=""> About us </a></li>
+          <li><a class="text-color-silver" href=""> Blog </a></li>
+          <li><a class="text-color-silver" href=""> Contact us </a></li>
+          <li><a class="text-color-silver" href=""> Pricing </a></li>
+          <li><a class="text-color-silver" href=""> Testimonials </a></li>
+        </ul>
+      </div>
+      <div class="links-column">
+        <p class="text-headline-4 text-color-white">Support</p>
+        <ul class="text-regular text-body-3">
+          <li><a class="text-color-silver" href=""> Help center </a></li>
+          <li><a class="text-color-silver" href=""> Terms of service </a></li>
+          <li><a class="text-color-silver" href=""> Legal </a></li>
+          <li><a class="text-color-silver" href=""> Privacy policy </a></li>
+          <li><a class="text-color-silver" href=""> Status </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="newsletter-container">
+      <p class="text-headline-4 text-color-white">Stay up to date</p>
+
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()" autocomplete="off">
+        <div class="input-field">
+          <input
+            type="email"
+            class="text-body-3"
+            placeholder="Your email address"
+            formControlName="email"
+          />
+          <button class="" type="submit">
+            <img src="assets/icons/interface/send.webp" alt="">
+          </button>
+        </div>
+        <span class="text-color-error text-regular text-body-3" *ngIf="isValidField('email')">
+          {{ getFieldError("email") }}
+        </span>
+      </form>
+
+    </div>
+  </div>
+</footer>

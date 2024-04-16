@@ -7,7 +7,7 @@ import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  public showMenu: boolean = true;
+  public showMenu: boolean = false;
 
   public siteLinks = [
     { name: 'Home', route: '' },
