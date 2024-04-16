@@ -85,8 +85,10 @@ button {
 .text-color-dark-grey{color: var(--color-dark-grey);}
 .text-color-light-grey{color: var(--color-light-grey);}
 .text-color-grey{color: var(--color-grey);}
+.text-color-silver{color: var(--color-silver);}
 .text-color-white{color: var(--color-white);}
 .text-color-black{color: var(--color-black);}
+.text-color-error{color: var(--color-error);}
 
 //shadows
 @mixin box-shadow ($value) {
