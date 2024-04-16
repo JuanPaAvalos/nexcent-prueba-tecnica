@@ -24,15 +24,11 @@ h3{
   border: 2px solid transparent;
   border-radius: 4px;
 
-  &:hover {
-    color: var(--color-primary);
-    border: 2px solid var(--color-black);
-  }
   &:focus {
     border: 2px solid var(--color-black);
   }
   &:active {
-    color: var(--color-shade-2);
+    // color: var(--color-shade-2);
     text-decoration: underline var(--color-color-shade-2);
   }
 }
