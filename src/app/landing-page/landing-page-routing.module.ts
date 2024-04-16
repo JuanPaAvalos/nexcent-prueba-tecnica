@@ -6,9 +6,9 @@ const routes: Routes = [
     path: '',
     children: [
       // { path: 'portfolio', component: HomePageComponent },
-      { path: 'home-module', component: HomeComponent },
-      { path: '', redirectTo: 'home-module', pathMatch: 'full' },
-      { path: '**', redirectTo: 'home-module' },
+      { path: '', component: HomeComponent },
+      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: '**', redirectTo: '' },
     ],
   },
 ];
