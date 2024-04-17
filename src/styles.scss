@@ -89,6 +89,7 @@ button {
 .text-color-white{color: var(--color-white);}
 .text-color-black{color: var(--color-black);}
 .text-color-error{color: var(--color-error);}
+.text-color-tint-2{color: var(--color-tint-2);}
 
 //shadows
 @mixin box-shadow ($value) {

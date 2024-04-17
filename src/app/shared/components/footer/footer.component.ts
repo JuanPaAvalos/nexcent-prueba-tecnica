@@ -8,6 +8,8 @@ import { ValidatorsService } from '../../services/validators.service';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
+  public subscriptionMessage: string = '';
+
   public socialMedia = [
     {
       name: 'Instagram',
@@ -52,6 +54,7 @@ export class FooterComponent {
     }
     console.log(this.myForm.value);
 
+    this.subscriptionMessage = "You've successfully registered";
     this.myForm.reset();
   }
 
