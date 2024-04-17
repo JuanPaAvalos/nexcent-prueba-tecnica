@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidatorsService } from '../../services/validators.service';
+import { MailService } from 'src/app/landing-page/services/mail.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,7 @@ import { ValidatorsService } from '../../services/validators.service';
 })
 export class FooterComponent {
   public subscriptionMessage: string = '';
+  public loading = false;
 
   public socialMedia = [
     {
@@ -44,17 +46,20 @@ export class FooterComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private validatorsSerice: ValidatorsService
+    private validatorsSerice: ValidatorsService,
+    private mailService: MailService
   ) {}
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.myForm.invalid) {
       this.myForm.markAllAsTouched();
       return;
     }
-    console.log(this.myForm.value);
+    this.loading = true;
+    const email: string = this.myForm.get('email')?.value;
+    this.subscriptionMessage = await this.mailService.subscribeNewsletter(email);
+    this.loading = false;
 
-    this.subscriptionMessage = "You've successfully registered";
     this.myForm.reset();
   }
 
