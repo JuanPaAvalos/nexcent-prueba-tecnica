@@ -21,6 +21,10 @@ section {
 
 .image-container {
   flex: 1 1 40%;
+
+  @media screen and (max-width: 768px) {
+    max-width: 300px;
+  }
 }
 
 .info-container {
@@ -46,8 +50,6 @@ section {
 img {
   max-width: 440px;
   width: 100%;
-
-  @media screen and (max-width: 768px) {
-    max-width: 300px;
-  }
+  object-fit: contain;
+  height: max-content;
 }
