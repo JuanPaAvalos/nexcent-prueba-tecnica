@@ -2,7 +2,7 @@
   <div class="footer-container">
     <div class="business-info-container">
       <div class="logo-container">
-        <img src="assets/images/Logo-white.webp" alt="Nexcent Logo"  width="191px" height="30px" loading="lazy"/>
+        <img src="assets/images/Logo-white.webp" alt="Nexcent Logo" width="191px" height="30px" loading="lazy" />
       </div>
       <div class="legal-info-container">
         <p class="text-color-silver text-regular text-body-3">
@@ -13,8 +13,8 @@
         </p>
       </div>
       <div class="social-media-links-container">
-        <div class="media-link-container" *ngFor="let item of socialMedia">
-          <a [href]="item.link">
+        <div class="media-link-container" *ngFor="let item of socialMedia ; let index = index">
+          <a [id]="'social-media-icon-'+index" [href]="item.link">
             <img [src]="item.image" [alt]="item.name" class="media-image" />
           </a>
         </div>
@@ -46,15 +46,10 @@
     <div class="newsletter-container">
       <p class="text-headline-4 text-color-white">Stay up to date</p>
 
-      <form [formGroup]="myForm" (ngSubmit)="onSubmit()" autocomplete="off">
+      <form id="newsletter-form" [formGroup]="myForm" (ngSubmit)="onSubmit()" autocomplete="off">
         <div class="input-field">
-          <input
-            type="email"
-            class="text-body-3"
-            placeholder="Your email address"
-            formControlName="email"
-            [disabled]="loading"
-          />
+          <input type="email" class="text-body-3" placeholder="Your email address" formControlName="email"
+            [disabled]="loading" />
           <button aria-label="subscribe to newsletter" type="submit">
             <img src="assets/icons/interface/send.webp" alt="subscribe to newsletter" width="18px" height="18px">
           </button>
@@ -62,7 +57,7 @@
         <span class="text-color-error text-regular text-body-3" *ngIf="isValidField('email')">
           {{ getFieldError("email") }}
         </span>
-        <span class="text-color-tint-2 text-regular text-body-3">
+        <span id="succesfully-registered-message" class="text-color-tint-2 text-regular text-body-3">
           {{ subscriptionMessage }}
         </span>
       </form>
